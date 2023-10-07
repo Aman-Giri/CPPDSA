@@ -23,11 +23,8 @@ bool isPossible(vector<int> stalls, int k, int mid){
 int spaceallocationtocow(vector<int> stalls, int k){
     sort(stalls.begin(),stalls.end());
     int start = 0;
-    int maxi = -1;
-    for(int i=0;i<stalls.size();i++){
-        maxi = max(maxi,stalls[i]);
-    }
-    int end = maxi;
+    int n = stalls.size();
+    int end = stalls[n-1]-stalls[0] ;
     int mid = start + (end-start)/2;
     int ans = -1;
 
@@ -51,6 +48,8 @@ int main(){
     int n  = v.size();
     int maximumSpace = spaceallocationtocow(v,k);
     cout<<"Maximum space between two cow is: "<<maximumSpace<<endl;
+
+    return 0;
 
 
 }

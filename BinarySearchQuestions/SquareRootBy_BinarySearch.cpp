@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 //Function to find the square root by using binary search:
-int squarerootans(int n){
+int  squarerootans(int n){
     int start = 0;
     int end = n-1;
     int mid = start + (end-start)/2;
@@ -40,4 +40,5 @@ int main(){
     int squareroot = findsquareRoot(number);
     cout<<"Square root of "<< number<<" is: "<<squareroot<<endl;
 }
+
 
