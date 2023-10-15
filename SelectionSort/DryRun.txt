@@ -1,0 +1,49 @@
+nums = [4, 2, 7, 1, 3]
+
+1. Initial State: 
+   nums = [4, 2, 7, 1, 3]
+
+2. Iteration 1 (i = 0):
+   - Set minvalueIndex to 0 (initially).
+   - Start inner loop (j = i + 1 = 1).
+     - Compare nums[1] (which is 2) with nums[0] (which is 4). Since 2 < 4, update minvalueIndex to 1.
+   - End of inner loop:
+     - Swap nums[0] (which is 4) with nums[1] (which is 2).
+     nums = [2, 4, 7, 1, 3]
+
+3. Iteration 2 (i = 1):
+   - Set minvalueIndex to 1 (initially).
+   - Start inner loop (j = i + 1 = 2).
+     - Compare nums[2] (which is 7) with nums[1] (which is 4). Since 7 > 4, minvalueIndex remains 1.
+   - Continue inner loop:
+     - Compare nums[2] (which is 7) with nums[1] (which is 2). Since 7 > 2, minvalueIndex remains 1.
+   - End of inner loop:
+     - Swap nums[1] (which is 4) with nums[1] (which is 2).
+     nums = [2, 4, 7, 1, 3]
+
+4. Iteration 3 (i = 2):
+   - Set minvalueIndex to 2 (initially).
+   - Start inner loop (j = i + 1 = 3).
+     - Compare nums[3] (which is 1) with nums[2] (which is 7). Since 1 < 7, update minvalueIndex to 3.
+   - Continue inner loop:
+     - Compare nums[3] (which is 1) with nums[2] (which is 4). Since 1 < 4, update minvalueIndex to 3.
+   - End of inner loop:
+     - Swap nums[2] (which is 7) with nums[3] (which is 1).
+     nums = [2, 4, 1, 7, 3]
+
+5. Iteration 4 (i = 3):
+   - Set minvalueIndex to 3 (initially).
+   - Start inner loop (j = i + 1 = 4).
+     - Compare nums[4] (which is 3) with nums[3] (which is 7). Since 3 < 7, update minvalueIndex to 4.
+   - End of inner loop:
+     - Swap nums[3] (which is 7) with nums[4] (which is 3).
+     nums = [2, 4, 1, 3, 7]
+
+6. Final Iteration (i = 4):
+   - Set minvalueIndex to 4 (initially).
+   - Start inner loop (j = i + 1 = 5). The loop condition j < nums.size() is not met, so the inner loop does not execute.
+   No swaps are made in this iteration.
+
+7. Result:
+   The final sorted array is:
+   nums = [1, 2, 3, 4, 7]

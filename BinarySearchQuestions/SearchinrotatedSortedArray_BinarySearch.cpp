@@ -22,7 +22,7 @@ int findpivot(vector<int>&nums){
 //function for the binary search
 int binarySearch(vector<int> &nums,int start,int end,int target){
     int s = start;
-    int e = nums.size()-1;
+    int e = end;
     int mid = s + (e-s)/2;
 
     while(s<=e){
@@ -56,7 +56,7 @@ int main(){
 
     vector<int> v = {4,5,6,7,0,1,2};
     int n = v.size();
-    int targetnumber = 1;
+    int targetnumber = 0;
     int targetindex = searchelement(v,targetnumber);
     cout << "Index of "<<targetnumber<<" is: "<<targetindex<<endl;
 
