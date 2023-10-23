@@ -5,11 +5,11 @@ using namespace std;
 int  squarerootans(int n){
     int start = 0;
     int end = n-1;
-    int mid = start + (end-start)/2;
+    long long int mid = start + (end-start)/2;
     int ans = -1;
 
     while(start <= end){
-        int square = mid*mid;
+       long long int square = mid*mid;
         if(square > n){
             end = mid-1;
         }
