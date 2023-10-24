@@ -2,11 +2,13 @@
 using namespace std;
 
 int binarySearch(int arr[],int size,int key){
-    int start=0;
-    int end = size-1;
+    int start=0; // these are the indexes 
+    int end = size-1; // these are the indexes
+    
 
     int mid = start + (end-start)/2;
 
+    //here we are comparing the indexes not the values 
     while(start <= end){
         if(arr[mid] == key){ 
             return mid;
